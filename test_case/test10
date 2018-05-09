@@ -1,0 +1,30 @@
+push int8(100)
+print
+;exit
+push float(110)
+dump
+;pop
+;dump
+mod
+dump
+assert float(100)
+exit
+;push int32(100000)
+;push float(100000.001)
+;push double(-200000000.002)
+dump
+pop
+dump
+push int8(0)
+dump
+pop
+pop
+;pop
+dump
+;mod
+;dump
+;pop
+;pop
+;pop
+dump
+;exit

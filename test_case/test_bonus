@@ -1,0 +1,12 @@
+push int32(4)
+push int32(2)
+;push int32(200)
+dump
+root
+dump
+;pop
+rev
+dump
+;pop
+
+exit

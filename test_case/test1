@@ -1,0 +1,28 @@
+push      int8 		(10)
+push      int8 		(10)
+push      int8 		(10)
+push      int8 		(10)
+
+
+push      double		(     -1077.0000000000000777   )
+
+assert      double 		(     -1077.0000000000000777)
+push      double 		(     1077.777   )
+dump
+add
+dump
+push int16(11077)
+sub
+dump
+push      float 		(     -2   )
+mul
+dump
+push      float 		(     -1077.777   )
+push      float 		(     -1077.777   )
+div
+mod
+print
+;exit
+   pop;  uuu
+;line_3
+;4444_line  _4444

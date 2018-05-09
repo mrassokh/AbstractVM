@@ -1,0 +1,8 @@
+push int8(33) ;! 
+push int8(65) ;p 
+push int8(111) ;o 
+push int8(108) ;l 
+push int8(112) ;p 
+push int32(2147483647) ; dfdff; ; ; ; 
+dump
+exit 

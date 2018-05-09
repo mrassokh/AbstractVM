@@ -1,0 +1,22 @@
+push			int8 (65)
+push			int16 (72)
+push			int32 (72000)
+push			float (720.44)
+push			double (720.044)
+dump
+pop
+dump
+add
+dump
+pop
+dump
+pop
+dump
+pop
+dump
+;pop
+
+push			int16 (0)
+;div
+;print
+exit
