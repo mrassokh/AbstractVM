@@ -1,7 +1,7 @@
 # AbstractVM
 
 example
-1 $>./avm
+1 $>./avm\n
 2 push int32(2)
 3 push int32(3)
 4 add
