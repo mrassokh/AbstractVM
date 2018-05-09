@@ -1,18 +1,5 @@
 # AbstractVM
 
-example
-1 $>./avm\n
-2 push int32(2)
-3 push int32(3)
-4 add
-5 assert int32(5)
-6 dump
-7 exit
-8 ;;
-9 5
-10 $>
-
-
 As for any assembly language, the language of AbstractVM is composed of a series of
 instructions, with one instruction per line. However, AbstractVM’s assembly language
 has a limited type system, which is a major difference from other real world assembly
