@@ -61,15 +61,15 @@ template <class T, eOperandType operandType>
 
     private:
 		 T*                                             		m_operand;
-         OperandFactory*                                		m_operandFactory;
-         eOperandType                                   		m_operandType;
-         int                                            		m_precision;
+         	OperandFactory*                                		m_operandFactory;
+         	eOperandType                                   		m_operandType;
+         	int                                            		m_precision;
 
 		 //Output value
 		 std::string                                    		m_toStringOutput;
 
 		 //Array of pointers to functions which convert string value to accordingly type
-         std::vector<void* (*)(std::string const & value)>      m_toValueFunc;
+         	std::vector<void* (*)(std::string const & value)>      m_toValueFunc;
 
 		 //Array of pointers to ARITHMETIC functions which returns result in string representation
 		 std::vector<std::string (*)(
@@ -84,24 +84,24 @@ template <class T, eOperandType operandType>
 		 void                                           		first_step_init();
 
 		 //Functions which convert string value to accordingly type
-         static void											*toInt8(std::string const & value);
-         static void											*toInt16(std::string const & value);
-         static void											*toInt32(std::string const & value);
-         static void											*toFloat(std::string const & value);
-         static void 											*toDouble(std::string const & value);
+         	static void									*toInt8(std::string const & value);
+         	static void									*toInt16(std::string const & value);
+         	static void									*toInt32(std::string const & value);
+         	static void									*toFloat(std::string const & value);
+         	static void 									*toDouble(std::string const & value);
 
 		 //ARITHMETIC functions which returns result in string representation
-		 static std::string										resultAdd(double const & leftValue, double const & rightValue);
-		 static std::string										resultSub(double const & leftValue, double const & rightValue);
-		 static std::string										resultMult(double const & leftValue, double const & rightValue);
-		 static std::string										resultDiv(double const & leftValue, double const & rightValue);
-		 static std::string										resultMod(double const & leftValue, double const &rightValue);
+		 static std::string								resultAdd(double const & leftValue, double const & rightValue);
+		 static std::string								resultSub(double const & leftValue, double const & rightValue);
+		 static std::string								resultMult(double const & leftValue, double const & rightValue);
+		 static std::string								resultDiv(double const & leftValue, double const & rightValue);
+		 static std::string								resultMod(double const & leftValue, double const &rightValue);
 
 		 //Exceptions
 		 static ValueOverflowException 							exceptOverflow;
 		 static ValueUnderflowException 						exceptUnderflow;
 	 	 static DivideByZeroException							exceptDivideZero;
-	 	 static	ModByZeroException								exceptModZero;
-	 	 static	ValueUnderflowOrOverflowException				exceptUnderflowOverflow;
+	 	 static	ModByZeroException							exceptModZero;
+	 	 static	ValueUnderflowOrOverflowException					exceptUnderflowOverflow;
 	};
 #endif // OPERAND_HPP
