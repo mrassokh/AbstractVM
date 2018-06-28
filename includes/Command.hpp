@@ -46,21 +46,21 @@ public:
 	Command& operator = (Command const & rhs);
 	virtual ~Command();
 
-	std::string const 				& getValue() const;
-	eCommandType const 				& getCommandType() const;
-	eOperandType const 				& getOperandType() const;
-	int const						& getValid() const;
-	int const						& getLine() const;
-	void 							toString() const;
+	std::string const 		& getValue() const;
+	eCommandType const 		& getCommandType() const;
+	eOperandType const 		& getOperandType() const;
+	int const			& getValid() const;
+	int const			& getLine() const;
+	void 				toString() const;
 	std::shared_ptr<std::string>	getOutput();
 	std::shared_ptr<std::string>	getCommandOutput() const;
 private:
-	eCommandType					m_commandType;
-	eOperandType					m_operandType;
-	std::string						m_value;
+	eCommandType			m_commandType;
+	eOperandType			m_operandType;
+	std::string			m_value;
 	std::shared_ptr<std::string>	m_commandOutput;
-	int								m_line;
-	int								m_isValid;
+	int				m_line;
+	int				m_isValid;
 };
 
 #endif
