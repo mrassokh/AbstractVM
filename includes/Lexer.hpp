@@ -25,9 +25,9 @@ class Lexer
 public:
 	static Lexer		*getLexer();
 
-	void 				getTokens(std::shared_ptr<std::vector<std::string>> readedLines,
-									std::shared_ptr<std::vector<std::shared_ptr<std::vector<std::string>>>> tokenLines);
-	void 				printTokenLines(std::shared_ptr<std::vector<std::shared_ptr<std::vector<std::string>>>> tokenLines);
+	void 			getTokens(std::shared_ptr<std::vector<std::string>> readedLines,
+					std::shared_ptr<std::vector<std::shared_ptr<std::vector<std::string>>>> tokenLines);
+	void 			printTokenLines(std::shared_ptr<std::vector<std::shared_ptr<std::vector<std::string>>>> tokenLines);
 
 private:
 	Lexer();
@@ -37,9 +37,9 @@ private:
 
 	static Lexer		*m_lexer;
 
-	void 				fillTokenLine(std::shared_ptr<std::vector<std::string>> tokenLine,
-										std::string const & inputLine);
-	EmptyFile			m_emptyFile;
+	void 			fillTokenLine(std::shared_ptr<std::vector<std::string>> tokenLine,
+						std::string const & inputLine);
+	EmptyFile		m_emptyFile;
 };
 
 
