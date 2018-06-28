@@ -27,31 +27,31 @@ class Executor
 {
 public:
 	static Executor* 	getExecutor();
-	void 				execute(std::shared_ptr<std::vector<Command *>> commandStack,
-								std::shared_ptr<std::vector<IOperand *>> operandStack,
-								std::shared_ptr<std::string> errorLog,
-								std::shared_ptr<int> validFlag,
-								std::shared_ptr<std::string> outputLog);
+	void 			execute(std::shared_ptr<std::vector<Command *>> commandStack,
+							std::shared_ptr<std::vector<IOperand *>> operandStack,
+							std::shared_ptr<std::string> errorLog,
+							std::shared_ptr<int> validFlag,
+							std::shared_ptr<std::string> outputLog);
 private:
 	Executor();
 	Executor(Executor const & rhs) = delete;
 	Executor & operator = (Executor const & rhs) = delete;
 	virtual ~Executor();
 
-	static Executor       											*m_executor;
+	static Executor       							*m_executor;
 
 	std::vector<void (Executor::*)(Command *command,
 		std::shared_ptr<std::vector<IOperand *>> operandStack)>		m_commandFunctions;
-	int																m_exitHappen;
+	int									m_exitHappen;
 
 	//Exceptions
-	StackIsEmpty													m_stackIsEmpty;
-	AssertFail														m_assertFail;
-	TopStackIsNotINT8												m_topStackIsNotINT8;
-	StackSizeLessTwo												m_stackSizeLessTwo;
-	CharIsNotPrintable												m_charIsNotPrintable;
-	ExitNotFind														m_exitNotFind;
-	Exit															m_exit;
+	StackIsEmpty								m_stackIsEmpty;
+	AssertFail								m_assertFail;
+	TopStackIsNotINT8							m_topStackIsNotINT8;
+	StackSizeLessTwo							m_stackSizeLessTwo;
+	CharIsNotPrintable							m_charIsNotPrintable;
+	ExitNotFind								m_exitNotFind;
+	Exit									m_exit;
 
 	void 				pushFunc(Command *command, std::shared_ptr<std::vector<IOperand *>> operandStack);
 	void 				dumpFunc(Command *command, std::shared_ptr<std::vector<IOperand *>> operandStack);
