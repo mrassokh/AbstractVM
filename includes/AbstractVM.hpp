@@ -22,14 +22,14 @@
 class AbstractVM
 {
 public:
-	static	AbstractVM								&Instance();
-	void 											procesing(int argc, char** argv);
-	void 											read(int argc, char** argv);
-	void 											lexing();
-	void 											parsing();
-	void 											execute();
-	void 											printResults();
-	void 											errorLog(std::exception& e);
+	static	AbstractVM					&Instance();
+	void 							procesing(int argc, char** argv);
+	void 							read(int argc, char** argv);
+	void 							lexing();
+	void 							parsing();
+	void 							execute();
+	void 							printResults();
+	void 							errorLog(std::exception& e);
 
 private:
 	AbstractVM();
@@ -37,19 +37,19 @@ private:
 	AbstractVM & operator = (AbstractVM const & rhs) = delete;
 	~AbstractVM();
 
-	Reader											*m_reader;
-	Lexer											*m_lexer;
-	Parser											*m_parser;
-	Executor										*m_executor;
+	Reader							*m_reader;
+	Lexer							*m_lexer;
+	Parser							*m_parser;
+	Executor						*m_executor;
 
 	std::shared_ptr<std::vector<std::string>> 		m_readedLines;
 	std::shared_ptr<std::vector
-	<std::shared_ptr<std::vector<std::string>>>> 	m_tokenLines;
+	<std::shared_ptr<std::vector<std::string>>>> 		m_tokenLines;
 	std::shared_ptr<std::vector<Command *>> 		m_commandStack;
 	std::shared_ptr<std::vector<IOperand *>> 		m_operandStack;
-	std::shared_ptr<std::string>					m_errorLog;
-	std::shared_ptr<std::string>					m_outputLog;
-	std::shared_ptr<int>							m_validFlag;
+	std::shared_ptr<std::string>				m_errorLog;
+	std::shared_ptr<std::string>				m_outputLog;
+	std::shared_ptr<int>					m_validFlag;
 };
 
 #endif // ABSTRACTVM_HPP
